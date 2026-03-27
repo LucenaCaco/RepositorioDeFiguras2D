@@ -1,22 +1,22 @@
-public class Quadrado implements FiguraGeometrica2D {
-    private double lado;
+public class Circulo implements FiguraGeometrica2D {
+    private double raio;
 
-    public Quadrado(double lado) {
-        this.lado = lado;
+    public Circulo(double raio) {
+        this.raio = raio;
     }
 
     @Override
     public double getArea() {
-        return this.lado * this.lado;
+        return Math.PI * Math.pow(this.raio, 2);
     }
 
     @Override
     public double getPerimetro() {
-        return 4 * this.lado;
+        return 2 * Math.PI * this.raio;
     }
 
     @Override
     public String getTipoFigura() {
-        return "Quadrado";
+        return "Círculo";
     }
 }

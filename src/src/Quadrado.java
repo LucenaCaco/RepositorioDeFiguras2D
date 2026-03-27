@@ -19,4 +19,8 @@ public class Quadrado implements FiguraGeometrica2D {
     public String getTipoFigura() {
         return "Quadrado";
     }
+    @Override
+    public int compareTo(FiguraGeometrica2D outra) {
+        return Double.compare(this.getArea(), outra.getArea());
+    }
 }
